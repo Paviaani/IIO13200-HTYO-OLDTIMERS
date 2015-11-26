@@ -10,10 +10,12 @@ div.Up {
     top: 10px;
 }
 div.Center {
-    position:absolute;
+    position: absolute;
     top: 100px;
+    margin-bottom: auto;
+    margin-top: auto;
 }
 div.Down {
-    position:absolute;
+    position: absolute;
     bottom: 100px;
 }
