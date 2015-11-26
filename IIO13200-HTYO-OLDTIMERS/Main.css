@@ -1,0 +1,19 @@
+﻿body {
+}
+div.test {
+    position: absolute;
+    right: 0px;
+    top: 0px;
+}
+div.Up {
+    position: relative;
+    top: 10px;
+}
+div.Center {
+    position:absolute;
+    top: 100px;
+}
+div.Down {
+    position:absolute;
+    bottom: 100px;
+}

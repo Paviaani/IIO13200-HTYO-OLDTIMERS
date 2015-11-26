@@ -7,14 +7,30 @@
     <title></title>
     <asp:ContentPlaceHolder ID="head" runat="server">
     </asp:ContentPlaceHolder>
+    <link rel="stylesheet" type="text/css" href="Main.css" />
 </head>
 <body>
     <form id="form1" runat="server">
-    <div>
-        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+        <div class="Up">
+            <h1>Testataan miten toimii</h1>
+            <div class="test">
+                <asp:ContentPlaceHolder ID="ContentPlaceHolder2" runat="server">
         
-        </asp:ContentPlaceHolder>
-    </div>
+                </asp:ContentPlaceHolder>
+            </div>
+        </div>
+
+        <div style="height: 479px" class="Center">
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+        
+            </asp:ContentPlaceHolder>
+        </div>
+    
+        <div style="height: 84px" class="Down">
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder3" runat="server">
+        
+            </asp:ContentPlaceHolder>
+        </div>
     </form>
 </body>
 </html>
