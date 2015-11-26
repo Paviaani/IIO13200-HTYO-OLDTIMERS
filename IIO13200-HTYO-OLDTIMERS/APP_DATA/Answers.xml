@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <questions>
 	<answers ID="1">
-		<answer att="True"></answer>
-		<answer att="False"></answer>
-		<answer att="False"></answer>
-		<answer att="False"></answer>
-		<answer att="False"></answer>
-		<answer att="False"></answer>
-		<answer att="False"></answer>
-		<answer att="False"></answer>
+		<answer att="True">Monaco</answer>
+		<answer att="False">Italia</answer>
+		<answer att="False">Ranska</answer>
+		<answer att="False">Belgia</answer>
+		<answer att="False">Saksa</answer>
+		<answer att="False">Norja</answer>
+		<answer att="False">Espanja</answer>
+		<answer att="False">Kreikka</answer>
 	</answers>
 	<answers ID="2">
 		<answer att="True"></answer>
