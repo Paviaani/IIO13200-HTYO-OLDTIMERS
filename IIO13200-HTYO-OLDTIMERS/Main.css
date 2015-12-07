@@ -1,6 +1,4 @@
-﻿body {
-}
-div.Login {
+﻿div.Login {
     position: absolute;
     right: 10px;
     top: 10px;
@@ -9,28 +7,31 @@ div.Login {
     height: 100px;
     border-style: solid;
     border-width: 2px;
+    padding: 10px 10px 10px 10px;
 }
 div.Up {
     position: absolute;
     top: 10px;
     left: 10px;
-    right: 270px;
+    right: 290px;
     height: 100px; 
     border: red;
     border-style: solid;
     border-width: 2px;
+    padding: 10px 10px 10px 10px;
 }
 div.Center {
     position: absolute;
     left: 10px;
-    top: 120px;
-    right: 270px;
-    height: 500px;
+    top: 140px;
+    right: 290px;
+    height: 520px;
     margin-bottom: auto;
     margin-top: auto;
     border: blue;
     border-style: solid;
     border-width: 2px;
+    padding: 10px 10px 10px 10px;
 }
 
 div.Question {
@@ -42,39 +43,43 @@ div.Question {
     border: green;
     border-style: solid;
     border-width: 2px;
+    padding: 10px 10px 10px 10px;
 }
 
 div.Answers {
     position: absolute;
-    top: 120px;
+    top: 140px;
     left: 10px;
     right: 10px;
     bottom: 10px;
     border: red;
     border-style: solid;
     border-width: 2px;
+    padding: 10px 10px 10px 10px;
 }
 
 div.Side {
     position: absolute;
-    top: 120px;
+    top: 140px;
     right: 10px;
     width: 250px;
     border: black;
-    height: 500px;
+    height: 520px;
     border-style: solid;
     border-width: 2px;
+    padding: 10px 10px 10px 10px;
 }
 
 div.Down {
     position: absolute;
-    top: 630px;
+    top: 690px;
     left: 10px;
     right: 10px;
     height: 100px;
     border: yellow;
     border-style: solid;
     border-width: 2px;
+    padding: 10px 10px 10px 10px;
 }
 
 input.Button {
