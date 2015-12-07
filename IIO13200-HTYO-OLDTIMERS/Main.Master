@@ -12,21 +12,30 @@
 <body>
     <form id="form1" runat="server">
         <div class="Up">
-            <h1>Testataan miten toimii</h1>
-            <div class="test">
+            <h1>Testataan miten toimii</h1>    
+        </div>
+        <div class="Login">
                 <asp:ContentPlaceHolder ID="ContentPlaceHolder2" runat="server">
+        
+                </asp:ContentPlaceHolder>
+        </div>
+
+        <div class="Center">
+            <div class="Question">
+
+            </div>
+            <div class="Answers">
+                <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
         
                 </asp:ContentPlaceHolder>
             </div>
         </div>
 
-        <div style="height: 479px" class="Center">
-            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
-        
-            </asp:ContentPlaceHolder>
+        <div class="Side">
+
         </div>
     
-        <div style="height: 84px" class="Down">
+        <div class="Down">
             <asp:ContentPlaceHolder ID="ContentPlaceHolder3" runat="server">
         
             </asp:ContentPlaceHolder>
