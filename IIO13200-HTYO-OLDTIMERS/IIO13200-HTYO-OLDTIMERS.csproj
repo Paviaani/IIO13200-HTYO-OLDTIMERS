@@ -70,18 +70,10 @@
     <Content Include="APP_DATA\Questions.xml" />
     <Content Include="Main.aspx" />
     <Content Include="Main.css" />
-    <Content Include="packages.config" />
     <Content Include="Main.Master" />
-    <None Include="Web.Debug.config">
-      <DependentUpon>Web.config</DependentUpon>
-    </None>
-    <None Include="Web.Release.config">
-      <DependentUpon>Web.config</DependentUpon>
-    </None>
   </ItemGroup>
   <ItemGroup>
     <Content Include="Quiz.aspx" />
-    <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Main.aspx.cs">
