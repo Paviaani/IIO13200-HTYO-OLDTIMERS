@@ -3,6 +3,9 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <input id="Button1" class="AnswerButton" type="button" value="button"/>
+    <input id="Button2" class="AnswerButton" type="button" value="button"/>
+    <input id="Button3" class="AnswerButton" type="button" value="button"/>
+    <input id="Button4" class="AnswerButton" type="button" value="button"/>
 </asp:Content>
 <asp:Content ID="Content3" ContentPlaceHolderID="ContentPlaceHolder2" runat="server">
     <input id="Text1" class="Textbox" type="text" />
