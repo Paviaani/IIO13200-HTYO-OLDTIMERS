@@ -19,6 +19,7 @@
     <asp:HyperLink ID="HyperLink1" runat="server">Register</asp:HyperLink>
 </asp:Content>
 <asp:Content ID="Content4" ContentPlaceHolderID="ContentPlaceHolder3" runat="server">
-    <h2>Footer</h2>
+    <p>© Ari Salopää ja Jani Joensuu</p>
+    <p>2015</p>
 </asp:Content>
 

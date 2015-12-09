@@ -12,7 +12,7 @@
 <body>
     <form id="form1" runat="server">
         <div class="Up">
-            <h1>Testataan miten toimii</h1>    
+            <h1>QuizWorld!</h1>    
         </div>
         <div class="Login">
                 <asp:ContentPlaceHolder ID="ContentPlaceHolder2" runat="server">
