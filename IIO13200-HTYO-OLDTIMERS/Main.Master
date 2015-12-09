@@ -22,7 +22,9 @@
 
         <div class="Center">
             <div class="Question">
-
+                <asp:ContentPlaceHolder ID="CphQuestion" runat="server">
+        
+                </asp:ContentPlaceHolder>
             </div>
             <div class="Answers">
                 <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
