@@ -156,6 +156,22 @@ input.CorrectAnswer {
     text-align: center;
 }
 
+input.CorrectAnswer:hover {
+    background: green;
+    background-image: -webkit-linear-gradient(top, green, blue);
+    background-image: -moz-linear-gradient(top, green, blue);
+    background-image: -o-linear-gradient(top, green, blue);
+    background-image: linear-gradient(to bottom, green, blue);
+}
+
+  input.WrongAnswer:hover {
+    background: red;
+    background-image: -webkit-linear-gradient(top, red, purple);
+    background-image: -moz-linear-gradient(top, red, purpleb);
+    background-image: -o-linear-gradient(top, red, purple);
+    background-image: linear-gradient(to bottom, red, purple);
+}
+
 input.AnswerButton:hover {
   background: #bd9f26;
   background-image: -webkit-linear-gradient(top, #bd9f26, #3498db);
