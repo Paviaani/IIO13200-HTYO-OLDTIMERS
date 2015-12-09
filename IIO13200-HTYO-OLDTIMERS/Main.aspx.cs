@@ -11,6 +11,9 @@ namespace IIO13200_HTYO_OLDTIMERS
     public partial class Main1 : System.Web.UI.Page
     {
         private Random rnd1 = new Random();
+        string correctAns = "";
+        int currentId = 0;
+        
 
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -18,7 +21,10 @@ namespace IIO13200_HTYO_OLDTIMERS
 
             //lbTest.Text = doc.InnerXml.ElementAt(2).ToString();
             //lbTest.Text = doc.DocumentElement.ChildNodes[0].InnerXml.ToString();
-            InitSystem();
+            if (lbTest.Text == "Testi label")
+            {
+                InitSystem();
+            }
         }
 
         private void InitSystem()
@@ -29,8 +35,10 @@ namespace IIO13200_HTYO_OLDTIMERS
             docQ.Load(Server.MapPath("~/App_Data/Questions.xml"));
             docA.Load(Server.MapPath("~/App_Data/Answers.xml"));
             int maxQ = docQ.DocumentElement.ChildNodes.Count;
-            int rndNum = randomNumber(1, maxQ);
-            int Qindex = findNode(rndNum, docQ);
+
+            currentId = randomNumber(1, maxQ);
+            int Qindex = findNode(currentId, docQ);
+            int Aindex = findNode(currentId, docA);
 
             string str = docQ.DocumentElement.ChildNodes[Qindex].Attributes.GetNamedItem("ID").Value;
             str += " - ";
@@ -38,7 +46,7 @@ namespace IIO13200_HTYO_OLDTIMERS
 
             lbTest.Text = str;
 
-            fillAnswers(Qindex, docA);
+            correctAns = fillAnswers(Aindex, docA);
 
         }
 
@@ -57,12 +65,14 @@ namespace IIO13200_HTYO_OLDTIMERS
         }
 
         //Function to randomice answers
-        private void fillAnswers(int index, XmlDocument doc)
+        private string fillAnswers(int index, XmlDocument doc)
         {
             int count = doc.DocumentElement.ChildNodes[index].ChildNodes.Count;
             List<int> luvut = new List<int>();
             int newNum = 0;
             int itIsLoop = 0;
+            string corrertA = "";
+
             //Randomice 4 number (node index values)
             while(luvut.Count < 4 && itIsLoop < 10000)
             {
@@ -77,6 +87,7 @@ namespace IIO13200_HTYO_OLDTIMERS
                         {
                             if (doc.DocumentElement.ChildNodes[index].ChildNodes[k].Attributes.GetNamedItem("att").Value == "True")
                             {
+                                corrertA = doc.DocumentElement.ChildNodes[index].ChildNodes[k].InnerText;
                                 if (luvut.Contains(k))
                                 {
                                     luvut.Add(newNum);
@@ -100,7 +111,12 @@ namespace IIO13200_HTYO_OLDTIMERS
             btnAns2.Text = doc.DocumentElement.ChildNodes[index].ChildNodes[luvut[1]].InnerText;
             btnAns3.Text = doc.DocumentElement.ChildNodes[index].ChildNodes[luvut[2]].InnerText;
             btnAns4.Text = doc.DocumentElement.ChildNodes[index].ChildNodes[luvut[3]].InnerText;
+            btnAns1.CssClass = "AnswerButton";
+            btnAns2.CssClass = "AnswerButton";
+            btnAns3.CssClass = "AnswerButton";
+            btnAns4.CssClass = "AnswerButton";
 
+            return corrertA;
         }
 
 
@@ -110,6 +126,57 @@ namespace IIO13200_HTYO_OLDTIMERS
         private int randomNumber(int min, int max)
         {
             return rnd1.Next(min, max + 1);
+        }
+
+
+
+        protected void checkButtonsAndWait()
+        {
+            if ( correctAns == btnAns1.Text )
+            {
+                btnAns1.CssClass = "CorrectAnswer";
+            }
+            else
+            {
+                btnAns1.CssClass = "WrongAnswer";
+            }
+
+            if (correctAns == btnAns2.Text)
+            {
+                btnAns2.CssClass = "CorrectAnswer";
+            }
+            else
+            {
+                btnAns2.CssClass = "WrongAnswer";
+            }
+
+            if (correctAns == btnAns3.Text)
+            {
+                btnAns3.CssClass = "CorrectAnswer";
+            }
+            else
+            {
+                btnAns3.CssClass = "WrongAnswer";
+            }
+
+            if (correctAns == btnAns4.Text)
+            {
+                btnAns4.CssClass = "CorrectAnswer";
+            }
+            else
+            {
+                btnAns4.CssClass = "WrongAnswer";
+            }
+
+            //sleep 5sec
+            System.Threading.Thread.Sleep(5000);
+
+            InitSystem();
+        }
+
+        protected void btnAns1_Click(object sender, EventArgs e)
+        {
+            checkButtonsAndWait();
         }
     }
 }

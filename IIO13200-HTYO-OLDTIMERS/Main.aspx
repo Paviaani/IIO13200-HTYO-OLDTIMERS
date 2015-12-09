@@ -3,13 +3,13 @@
     
 </asp:Content>
 <asp:Content ID="CQuestion" ContentPlaceHolderID="CphQuestion" runat="server">
-    <h1><asp:Label ID="lbTest" runat="server" Text="Testi label"></asp:Label></h1>
+    <h2><asp:Label ID="lbTest" runat="server" Text="Testi label"></asp:Label></h2>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-    <asp:Button ID="btnAns1" CssClass="AnswerButton" Text="Answer1" runat="server"/>
-    <asp:Button ID="btnAns2" CssClass="AnswerButton" Text="Answer2" runat="server"/>
-    <asp:Button ID="btnAns3" CssClass="AnswerButton" Text="Answer3" runat="server"/>
-    <asp:Button ID="btnAns4" CssClass="AnswerButton" Text="Answer4" runat="server"/>
+    <asp:Button ID="btnAns1" CssClass="AnswerButton" Text="Answer1" runat="server" OnClick="btnAns1_Click"/>
+    <asp:Button ID="btnAns2" CssClass="AnswerButton" Text="Answer2" runat="server" OnClick="btnAns1_Click"/>
+    <asp:Button ID="btnAns3" CssClass="AnswerButton" Text="Answer3" runat="server" OnClick="btnAns1_Click"/>
+    <asp:Button ID="btnAns4" CssClass="AnswerButton" Text="Answer4" runat="server" OnClick="btnAns1_Click"/>
 </asp:Content>
 <asp:Content ID="Content3" ContentPlaceHolderID="ContentPlaceHolder2" runat="server">
     <input id="Text1" class="Textbox" type="text" />
