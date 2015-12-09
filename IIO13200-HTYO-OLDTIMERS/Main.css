@@ -9,6 +9,7 @@
     border-width: 2px;
     padding: 10px 10px 10px 10px;
 }
+
 div.Up {
     position: absolute;
     top: 10px;
@@ -20,6 +21,7 @@ div.Up {
     border-width: 2px;
     padding: 10px 10px 10px 10px;
 }
+
 div.Center {
     position: absolute;
     left: 10px;
@@ -92,6 +94,7 @@ input.AnswerButton {
     height: 20%;
     margin-top: 10px;
 }
+
 input.Textbox {
     border-radius: 10px;
     border: #1f628d;
