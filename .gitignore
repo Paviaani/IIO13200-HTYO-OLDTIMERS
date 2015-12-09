@@ -216,3 +216,24 @@ pip-log.txt
 
 #Mr Developer
 .mr.developer.cfg
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Thumbnails
+._*
+
+# Files that might appear on external disk
+.Spotlight-V100
+.Trashes
+
+# Directories potentially created on remote AFP share
+.AppleDB
+.AppleDesktop
+Network Trash Folder
+Temporary Items
+.apdisk
+
+# No files that chances in between PCs
+IIO13200-HTYO-OLDTIMERS\obj
+.vs
