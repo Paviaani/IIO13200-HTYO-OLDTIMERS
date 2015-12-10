@@ -10,6 +10,7 @@
     <asp:Button ID="btnAns2" CssClass="AnswerButton" Text="Answer2" runat="server" OnClick="btnAns1_Click"/>
     <asp:Button ID="btnAns3" CssClass="AnswerButton" Text="Answer3" runat="server" OnClick="btnAns1_Click"/>
     <asp:Button ID="btnAns4" CssClass="AnswerButton" Text="Answer4" runat="server" OnClick="btnAns1_Click"/>
+    <asp:Button ID="btnNext" CssClass="AnswerButton" Text="Next" runat="server" OnClick="btnNext_Click"/>
 </asp:Content>
 <asp:Content ID="Content3" ContentPlaceHolderID="ContentPlaceHolder2" runat="server">
     <input id="Text1" class="Textbox" type="text" />

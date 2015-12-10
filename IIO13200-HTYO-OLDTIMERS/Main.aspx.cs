@@ -11,8 +11,8 @@ namespace IIO13200_HTYO_OLDTIMERS
     public partial class Main1 : System.Web.UI.Page
     {
         private Random rnd1 = new Random();
-        string correctAns = "";
-        int currentId = 0;
+        private string correctAns = "";
+        private int currentId = 0;
         
 
         protected void Page_Load(object sender, EventArgs e)
@@ -40,14 +40,14 @@ namespace IIO13200_HTYO_OLDTIMERS
             int Qindex = findNode(currentId, docQ);
             int Aindex = findNode(currentId, docA);
 
-            string str = docQ.DocumentElement.ChildNodes[Qindex].Attributes.GetNamedItem("ID").Value;
-            str += " - ";
-            str += docQ.DocumentElement.ChildNodes[Qindex].InnerText;
+            //string str = docQ.DocumentElement.ChildNodes[Qindex].Attributes.GetNamedItem("ID").Value;
+            //str += " - ";
+            //str += docQ.DocumentElement.ChildNodes[Qindex].InnerText;
 
-            lbTest.Text = str;
+            lbTest.Text = docQ.DocumentElement.ChildNodes[Qindex].InnerText; ;
 
-            correctAns = fillAnswers(Aindex, docA);
-
+            fillAnswers(Aindex, docA);
+            btnNext.Visible = false;
         }
 
         //Function to find XMLNode index with given ID
@@ -87,7 +87,11 @@ namespace IIO13200_HTYO_OLDTIMERS
                         {
                             if (doc.DocumentElement.ChildNodes[index].ChildNodes[k].Attributes.GetNamedItem("att").Value == "True")
                             {
-                                corrertA = doc.DocumentElement.ChildNodes[index].ChildNodes[k].InnerText;
+                                //Does not work for some reason
+                                correctAns = doc.DocumentElement.ChildNodes[index].ChildNodes[k].InnerText;
+                                //btnNext.Visible = false;
+                                //this works!
+                                btnNext.Text = doc.DocumentElement.ChildNodes[index].ChildNodes[k].InnerText;
                                 if (luvut.Contains(k))
                                 {
                                     luvut.Add(newNum);
@@ -132,6 +136,8 @@ namespace IIO13200_HTYO_OLDTIMERS
 
         protected void checkButtonsAndWait()
         {
+            correctAns = btnNext.Text;
+            btnNext.Text = "Next";
             if ( correctAns == btnAns1.Text )
             {
                 btnAns1.CssClass = "CorrectAnswer";
@@ -168,15 +174,24 @@ namespace IIO13200_HTYO_OLDTIMERS
                 btnAns4.CssClass = "WrongAnswer";
             }
 
-            //sleep 5sec
-            System.Threading.Thread.Sleep(5000);
-
-            InitSystem();
         }
 
         protected void btnAns1_Click(object sender, EventArgs e)
         {
-            checkButtonsAndWait();
+            if (btnNext.Text != "Next")
+            {
+                checkButtonsAndWait();
+            }
+            else
+            {
+                InitSystem();
+            }
+            
+        }
+
+        protected void btnNext_Click(object sender, EventArgs e)
+        {
+            InitSystem();
         }
     }
 }
