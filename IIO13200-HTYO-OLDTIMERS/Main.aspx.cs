@@ -11,8 +11,8 @@ namespace IIO13200_HTYO_OLDTIMERS
     public partial class Main1 : System.Web.UI.Page
     {
         private Random rnd1 = new Random();
-        private string correctAns = "";
-        private int currentId = 0;
+        private string correctAns;
+        private int currentId;
         
 
         protected void Page_Load(object sender, EventArgs e)
@@ -48,6 +48,12 @@ namespace IIO13200_HTYO_OLDTIMERS
 
             fillAnswers(Aindex, docA);
             btnNext.Visible = false;
+
+            
+            int tryed = 0;
+            int.TryParse(lbTryes.Text, out tryed);
+            tryed++;
+            lbTryes.Text = tryed.ToString();
         }
 
         //Function to find XMLNode index with given ID
@@ -134,13 +140,20 @@ namespace IIO13200_HTYO_OLDTIMERS
 
 
 
-        protected void checkButtonsAndWait()
+        protected void checkButtonsAndWait(int sender)
         {
             correctAns = btnNext.Text;
             btnNext.Text = "Next";
+            int score = 0;
             if ( correctAns == btnAns1.Text )
             {
                 btnAns1.CssClass = "CorrectAnswer";
+                if (sender == 1)
+                {
+                    int.TryParse(lbScore.Text, out score);
+                    score++;
+                    lbScore.Text = score.ToString();
+                }
             }
             else
             {
@@ -150,6 +163,12 @@ namespace IIO13200_HTYO_OLDTIMERS
             if (correctAns == btnAns2.Text)
             {
                 btnAns2.CssClass = "CorrectAnswer";
+                if (sender == 2)
+                {
+                    int.TryParse(lbScore.Text, out score);
+                    score++;
+                    lbScore.Text = score.ToString();
+                }
             }
             else
             {
@@ -159,6 +178,12 @@ namespace IIO13200_HTYO_OLDTIMERS
             if (correctAns == btnAns3.Text)
             {
                 btnAns3.CssClass = "CorrectAnswer";
+                if (sender == 3)
+                {
+                    int.TryParse(lbScore.Text, out score);
+                    score++;
+                    lbScore.Text = score.ToString();
+                }
             }
             else
             {
@@ -168,25 +193,69 @@ namespace IIO13200_HTYO_OLDTIMERS
             if (correctAns == btnAns4.Text)
             {
                 btnAns4.CssClass = "CorrectAnswer";
+                if (sender == 4)
+                {
+                    int.TryParse(lbScore.Text, out score);
+                    score++;
+                    lbScore.Text = score.ToString();
+                }
             }
             else
             {
                 btnAns4.CssClass = "WrongAnswer";
             }
-
         }
 
         protected void btnAns1_Click(object sender, EventArgs e)
         {
             if (btnNext.Text != "Next")
             {
-                checkButtonsAndWait();
+                checkButtonsAndWait(1);
             }
             else
             {
                 InitSystem();
             }
             
+        }
+
+        protected void btnAns2_Click(object sender, EventArgs e)
+        {
+            if (btnNext.Text != "Next")
+            {
+                checkButtonsAndWait(2);
+            }
+            else
+            {
+                InitSystem();
+            }
+
+        }
+
+        protected void btnAns3_Click(object sender, EventArgs e)
+        {
+            if (btnNext.Text != "Next")
+            {
+                checkButtonsAndWait(3);
+            }
+            else
+            {
+                InitSystem();
+            }
+
+        }
+
+        protected void btnAns4_Click(object sender, EventArgs e)
+        {
+            if (btnNext.Text != "Next")
+            {
+                checkButtonsAndWait(4);
+            }
+            else
+            {
+                InitSystem();
+            }
+
         }
 
         protected void btnNext_Click(object sender, EventArgs e)

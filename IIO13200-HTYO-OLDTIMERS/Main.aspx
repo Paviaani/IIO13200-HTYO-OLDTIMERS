@@ -7,10 +7,11 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <asp:Button ID="btnAns1" CssClass="AnswerButton" Text="Answer1" runat="server" OnClick="btnAns1_Click"/>
-    <asp:Button ID="btnAns2" CssClass="AnswerButton" Text="Answer2" runat="server" OnClick="btnAns1_Click"/>
-    <asp:Button ID="btnAns3" CssClass="AnswerButton" Text="Answer3" runat="server" OnClick="btnAns1_Click"/>
-    <asp:Button ID="btnAns4" CssClass="AnswerButton" Text="Answer4" runat="server" OnClick="btnAns1_Click"/>
+    <asp:Button ID="btnAns2" CssClass="AnswerButton" Text="Answer2" runat="server" OnClick="btnAns2_Click"/>
+    <asp:Button ID="btnAns3" CssClass="AnswerButton" Text="Answer3" runat="server" OnClick="btnAns3_Click"/>
+    <asp:Button ID="btnAns4" CssClass="AnswerButton" Text="Answer4" runat="server" OnClick="btnAns4_Click"/>
     <asp:Button ID="btnNext" CssClass="AnswerButton" Text="Next" runat="server" OnClick="btnNext_Click"/>
+    <p>Score: <asp:Label runat="server" ID="lbScore" Text="0"></asp:Label>/<asp:Label runat="server" ID="lbTryes" Text="0"></asp:Label></p>
 </asp:Content>
 <asp:Content ID="Content3" ContentPlaceHolderID="ContentPlaceHolder2" runat="server">
     <input id="Text1" class="Textbox" type="text" />

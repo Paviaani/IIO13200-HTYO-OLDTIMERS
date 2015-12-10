@@ -67,6 +67,24 @@ namespace IIO13200_HTYO_OLDTIMERS {
         protected global::System.Web.UI.WebControls.Button btnNext;
         
         /// <summary>
+        /// lbScore control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lbScore;
+        
+        /// <summary>
+        /// lbTryes control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lbTryes;
+        
+        /// <summary>
         /// HyperLink1 control.
         /// </summary>
         /// <remarks>
