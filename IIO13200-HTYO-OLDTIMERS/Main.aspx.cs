@@ -113,8 +113,8 @@ namespace IIO13200_HTYO_OLDTIMERS
 
             btnAns1.Text = doc.DocumentElement.ChildNodes[index].ChildNodes[luvut[0]].InnerText;
             btnAns2.Text = doc.DocumentElement.ChildNodes[index].ChildNodes[luvut[1]].InnerText;
-            btnAns3.Text = doc.DocumentElement.ChildNodes[index].ChildNodes[luvut[2]].InnerText;
-            btnAns4.Text = doc.DocumentElement.ChildNodes[index].ChildNodes[luvut[3]].InnerText;
+            btnAns3.Text = doc.DocumentElement.ChildNodes[index].ChildNodes[luvut[3]].InnerText;
+            btnAns4.Text = doc.DocumentElement.ChildNodes[index].ChildNodes[luvut[2]].InnerText;
             btnAns1.CssClass = "AnswerButton";
             btnAns2.CssClass = "AnswerButton";
             btnAns3.CssClass = "AnswerButton";
